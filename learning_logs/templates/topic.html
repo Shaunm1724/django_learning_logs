@@ -1,0 +1,21 @@
+{% extends 'root.html' %}
+    {% block title%} Topics- Learning Logs {% endblock %}
+    {% block active_topic%} active {% endblock %}
+    {% block content%}
+    <div class="p-5">
+        <h1>Topics</h1>
+    </div>
+        {% for topic in topics %}
+        <div class="card p-3">
+            <div class="card-body">
+            <h5 class="card-title">{{topic.name}}</h5>
+            <p class="card-text">{{topic.description}}</p>
+            <p class="card-text">User: {{topic.user}}</p>
+            <p class="card-text">{{topic.date_created}}</p>
+            <a href="#" class="btn btn-primary" role="button">Learn More</a>
+            </div>
+        </div>
+        {% endfor %}
+    
+      
+    {% endblock %}
